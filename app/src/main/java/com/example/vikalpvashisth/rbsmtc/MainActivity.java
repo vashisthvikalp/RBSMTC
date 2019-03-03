@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (firebaseAuth.getCurrentUser() != null){
             //start profile activity here
             finish();
-            startActivity(new Intent(this,ProfileActivity.class));
+            startActivity(new Intent(this, DashboardActivity.class));
         }
 
         editTextEmail = (EditText)findViewById(R.id.editTextEmail);
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         if (task.isSuccessful()){
                             //start profile activity
                             finish();
-                            startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
+                            startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
                         }
                         else {
                             // If sign in fails, display a message to the user.

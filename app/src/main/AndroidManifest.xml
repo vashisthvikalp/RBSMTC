@@ -11,8 +11,19 @@
         android:roundIcon="@drawable/ballu"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Assignment"></activity>
-        <activity android:name=".ProfileActivity" />
+        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".UniversityResult" />
+        <activity android:name=".Notice" />
+        <activity android:name=".NewsEvents" />
+        <activity android:name=".Library" />
+        <activity android:name=".Fee" />
+        <activity android:name=".Faculty" />
+        <activity android:name=".CTSchedule" />
+        <activity android:name=".CTMarks" />
+        <activity android:name=".ContactUs" />
+        <activity android:name=".Attendance" />
+        <activity android:name=".Assignment" />
+        <activity android:name=".DashboardActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

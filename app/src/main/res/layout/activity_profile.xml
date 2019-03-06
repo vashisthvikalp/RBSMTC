@@ -1,9 +1,629 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ProfileActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="35.0dip"
+        android:background="#3b7d32"
+        android:orientation="horizontal"
+        android:paddingTop="5.0dip"
+        android:paddingBottom="5.0dip"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="5.0dip"
+            android:layout_marginRight="5.0dip"
+            android:text="Profile"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/white"
+            android:textScaleX="1.1"
+            android:textSize="20.0sp" />
+
+
+    </RelativeLayout>
+
+    <!--Main Card Layout-->
+    <RelativeLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/relBottom"
+        android:layout_below="@id/header"
+        android:background="@android:color/transparent">
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="10.0dip"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="5.0dip">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_background"
+                android:orientation="vertical"
+                android:weightSum="800.0">
+
+                <LinearLayout
+                    android:id="@+id/layoutPImage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200.0dip"
+                    android:layout_margin="1.0dip"
+                    android:background="@drawable/prfl"
+                    android:orientation="vertical"
+                    android:weightSum="800.0">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="100.0dip"
+                        android:layout_weight="350.0"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvProName"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingStart="5.0dip"
+                            android:paddingLeft="5.0dip"
+                            android:paddingTop="5.0dip"
+                            android:paddingEnd="5.0dip"
+                            android:text="Name"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/white"
+                            android:textScaleX="1.2"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip"
+                            android:layout_marginLeft="110.0dip"
+                            android:layout_marginRight="110.0dip"
+                            android:background="#ffe6e5e5" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3.0dip"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingStart="5.0dip"
+                                android:paddingEnd="5.0dip"
+                                android:paddingRight="5.0dip"
+                                android:text="Class  :"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="@color/white"
+                                android:textScaleX="1.15"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/tvProClass"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingStart="5.0dip"
+                                android:paddingEnd="5.0dip"
+                                android:paddingRight="5.0dip"
+                                android:text="class"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="@color/white"
+                                android:textScaleX="1.15"
+                                android:textStyle="italic"
+                                android:visibility="visible" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:background="#ffffdfad"
+                    android:visibility="visible" />
+
+                <ScrollView
+                    android:id="@+id/scrollView1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="77.0dip"
+                    android:fillViewport="false"
+                    android:padding="5.0dip">
+
+                    <LinearLayout
+                        android:id="@+id/layoutChque"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/tableRow1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="800.0">
+
+                            <TextView
+                                android:id="@+id/tv2"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10.0dip"
+                                android:layout_marginLeft="10.0dip"
+                                android:layout_weight="350.0"
+                                android:gravity="start"
+                                android:text="Adm No."
+                                android:textAllCaps="true"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="#ff666666"
+                                android:textScaleX="1.2" />
+
+                            <TextView
+                                android:id="@+id/tvProAdmn"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5.0dip"
+                                android:layout_marginLeft="5.0dip"
+                                android:layout_weight="450.0"
+                                android:gravity="start"
+                                android:paddingTop="5.0dip"
+                                android:paddingBottom="5.0dip"
+                                android:textAppearance="?android:textAppearanceSmall"
+                                android:textColor="#ff666666"
+                                android:textScaleX="1.2" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dip"
+                            android:layout_marginStart="5.0dip"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="#ffe6e5e5" />
+
+                        <LinearLayout
+                            android:id="@+id/tableRow2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5.0dip"
+                            android:orientation="horizontal"
+                            android:weightSum="800.0">
+
+                            <TextView
+                                android:id="@+id/tv3"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10.0dip"
+                                android:layout_marginLeft="10.0dip"
+                                android:layout_weight="350.0"
+                                android:gravity="start"
+                                android:text="Roll No."
+                                android:textAllCaps="true"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="#ff666666"
+                                android:textScaleX="1.2" />
+
+                            <TextView
+                                android:id="@+id/tvProRollNo"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5.0dip"
+                                android:layout_marginLeft="5.0dip"
+                                android:layout_weight="450.0"
+                                android:gravity="start"
+                                android:paddingTop="5.0dip"
+                                android:paddingBottom="5.0dip"
+                                android:textAppearance="?android:textAppearanceSmall"
+                                android:textColor="#ff666666"
+                                android:textScaleX="1.2" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dip"
+                            android:layout_marginStart="5.0dip"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="#ffe6e5e5" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5.0dip"
+                            android:orientation="horizontal"
+                            android:weightSum="800.0">
+
+                            <TextView
+                                android:id="@+id/tv4"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10.0dip"
+                                android:layout_marginLeft="10.0dip"
+                                android:layout_weight="350.0"
+                                android:gravity="start"
+                                android:text="Father"
+                                android:textAllCaps="true"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="#ff666666"
+                                android:textScaleX="1.2" />
+
+                            <TextView
+                                android:id="@+id/tvProFather"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5.0dip"
+                                android:layout_marginLeft="5.0dip"
+                                android:layout_weight="450.0"
+                                android:gravity="start"
+                                android:paddingTop="5.0dip"
+                                android:paddingBottom="5.0dip"
+                                android:text=""
+                                android:textAppearance="?android:textAppearanceSmall"
+                                android:textColor="#ff666666"
+                                android:textScaleX="1.2" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dip"
+                            android:layout_marginStart="5.0dip"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="#ffe6e5e5" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5.0dip"
+                            android:orientation="horizontal"
+                            android:weightSum="800.0">
+
+                            <TextView
+                                android:id="@+id/tv5"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10.0dip"
+                                android:layout_marginLeft="10.0dip"
+                                android:layout_weight="350.0"
+                                android:gravity="start"
+                                android:paddingBottom="0.5dip"
+                                android:singleLine="true"
+                                android:text="Mother"
+                                android:textAllCaps="true"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="#ff666666"
+                                android:textScaleX="1.2" />
+
+                            <TextView
+                                android:id="@+id/tvProMother"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5.0dip"
+                                android:layout_marginLeft="5.0dip"
+                                android:layout_weight="450.0"
+                                android:gravity="start"
+                                android:paddingTop="5.0dip"
+                                android:paddingBottom="5.0dip"
+                                android:text=""
+                                android:textAllCaps="false"
+                                android:textAppearance="?android:textAppearanceSmall"
+                                android:textColor="#ff666666"
+                                android:textScaleX="1.2" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dip"
+                            android:layout_marginStart="5.0dip"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="#ffe6e5e5" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5.0dip"
+                            android:orientation="horizontal"
+                            android:weightSum="800.0">
+
+                            <TextView
+                                android:id="@+id/tv6"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10.0dip"
+                                android:layout_marginLeft="10.0dip"
+                                android:layout_weight="350.0"
+                                android:gravity="start"
+                                android:text="Address"
+                                android:textAllCaps="true"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="#ff666666"
+                                android:textScaleX="1.2" />
+
+                            <TextView
+                                android:id="@+id/tvProHouse"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5.0dip"
+                                android:layout_marginLeft="5.0dip"
+                                android:layout_weight="450.0"
+                                android:gravity="start"
+                                android:paddingTop="5.0dip"
+                                android:paddingBottom="5.0dip"
+                                android:text=""
+                                android:textAllCaps="false"
+                                android:textAppearance="?android:textAppearanceSmall"
+                                android:textColor="#ff666666"
+                                android:textScaleX="1.2" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dip"
+                            android:layout_marginStart="5.0dip"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="#ffe6e5e5" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5.0dip"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            android:weightSum="800.0">
+
+                            <TextView
+                                android:id="@+id/tv7"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10.0dip"
+                                android:layout_marginLeft="10.0dip"
+                                android:layout_weight="350.0"
+                                android:gravity="start"
+                                android:text="Date of Birth"
+                                android:textAllCaps="true"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="#ff666666"
+                                android:textScaleX="1.2" />
+
+                            <TextView
+                                android:id="@+id/tvDob"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5.0dip"
+                                android:layout_marginLeft="5.0dip"
+                                android:layout_weight="500.0"
+                                android:gravity="start"
+                                android:paddingTop="5.0dip"
+                                android:paddingBottom="5.0dip"
+                                android:text=""
+                                android:textAppearance="?android:textAppearanceSmall"
+                                android:textColor="#ff666666"
+                                android:textScaleX="1.2" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dip"
+                            android:layout_marginStart="5.0dip"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="#ffe6e5e5" />
+
+                        <LinearLayout
+                            android:id="@+id/tableRow4"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5.0dip"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            android:weightSum="800.0">
+
+                            <TextView
+                                android:id="@+id/tv8"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10.0dip"
+                                android:layout_marginLeft="10.0dip"
+                                android:layout_weight="350.0"
+                                android:gravity="start"
+                                android:singleLine="true"
+                                android:text="Father's No"
+                                android:textAllCaps="true"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="#ff666666"
+                                android:textScaleX="1.2" />
+
+                            <TextView
+                                android:id="@+id/tvFatherMobile"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5.0dip"
+                                android:layout_marginLeft="5.0dip"
+                                android:layout_weight="500.0"
+                                android:gravity="start"
+                                android:paddingTop="5.0dip"
+                                android:paddingBottom="5.0dip"
+                                android:text=""
+                                android:textAppearance="?android:textAppearanceSmall"
+                                android:textColor="#ff666666"
+                                android:textScaleX="1.2" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dip"
+                            android:layout_marginStart="5.0dip"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="#ffe6e5e5" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5.0dip"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            android:weightSum="800.0">
+
+                            <TextView
+                                android:id="@+id/tv9"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10.0dip"
+                                android:layout_marginLeft="10.0dip"
+                                android:layout_weight="350.0"
+                                android:gravity="start"
+                                android:singleLine="true"
+                                android:text="Mother's No"
+                                android:textAllCaps="true"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="#ff666666"
+                                android:textScaleX="1.2" />
+
+                            <TextView
+                                android:id="@+id/tvMotherMobile"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5.0dip"
+                                android:layout_marginLeft="5.0dip"
+                                android:layout_weight="500.0"
+                                android:gravity="start"
+                                android:paddingTop="5.0dip"
+                                android:paddingBottom="5.0dip"
+                                android:text=""
+                                android:textAppearance="?android:textAppearanceSmall"
+                                android:textColor="#ff666666"
+                                android:textScaleX="1.2" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dip"
+                            android:layout_marginStart="5.0dip"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="#ffe6e5e5" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5.0dip"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            android:weightSum="800.0">
+
+                            <TextView
+                                android:id="@+id/tv99"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="13.0dip"
+                                android:layout_marginLeft="13.0dip"
+                                android:layout_weight="350.0"
+                                android:gravity="start"
+                                android:text="Blood Group"
+                                android:textAllCaps="true"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="#ff666666"
+                                android:textScaleX="1.2" />
+
+                            <TextView
+                                android:id="@+id/tvbldgrp"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5.0dip"
+                                android:layout_marginLeft="5.0dip"
+                                android:layout_weight="500.0"
+                                android:gravity="start"
+                                android:paddingTop="5.0dip"
+                                android:paddingBottom="5.0dip"
+                                android:text=""
+                                android:textAppearance="?android:textAppearanceSmall"
+                                android:textColor="#ff666666"
+                                android:textScaleX="1.2" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dip"
+                            android:layout_marginStart="5.0dip"
+                            android:layout_marginLeft="5.0dip"
+                            android:background="#ffe6e5e5" />
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:layout_marginTop="140.0dip">
+
+                <RelativeLayout
+                    android:layout_width="140.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="140.0dip"
+                        android:layout_height="140.0dip"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/sblg_crcl_xml"
+                        android:gravity="center" />
+
+
+                </RelativeLayout>
+
+
+            </FrameLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
+    <!--Bottom bar-->
+    <LinearLayout
+        android:id="@+id/relBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="30.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="#3b7d32"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/headerTextLogin1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="RBSMTC"
+            android:textColor="@color/white"
+            android:textScaleX="1.2"
+            android:textSize="12.0sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</RelativeLayout>

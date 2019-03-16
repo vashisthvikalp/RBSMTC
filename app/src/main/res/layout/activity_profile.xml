@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/background"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
+    <!--Top bar-->
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="fill_parent"
@@ -58,7 +60,7 @@
 
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="fill_parent"
                 android:background="@drawable/card_background"
                 android:orientation="vertical"
                 android:weightSum="800.0">
@@ -408,7 +410,7 @@
                                 android:textScaleX="1.2" />
 
                             <TextView
-                                android:id="@+id/tvDob"
+                                android:id="@+id/tvProDob"
                                 android:layout_width="0.0dip"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="5.0dip"
@@ -455,7 +457,7 @@
                                 android:textScaleX="1.2" />
 
                             <TextView
-                                android:id="@+id/tvFatherMobile"
+                                android:id="@+id/tvProFatherMobile"
                                 android:layout_width="0.0dip"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="5.0dip"
@@ -501,7 +503,7 @@
                                 android:textScaleX="1.2" />
 
                             <TextView
-                                android:id="@+id/tvMotherMobile"
+                                android:id="@+id/tvProMotherMobile"
                                 android:layout_width="0.0dip"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="5.0dip"
@@ -546,7 +548,7 @@
                                 android:textScaleX="1.2" />
 
                             <TextView
-                                android:id="@+id/tvbldgrp"
+                                android:id="@+id/tvProBldGrp"
                                 android:layout_width="0.0dip"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="5.0dip"

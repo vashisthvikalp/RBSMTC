@@ -1,9 +1,12 @@
 package com.example.vikalpvashisth.rbsmtc;
 
+import android.app.ProgressDialog;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,6 +17,8 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class ProfileActivity extends AppCompatActivity {
+
+    private static final String TAG = "ProfileActivity";
 
     private TextView tvProName;
     private TextView tvProClass;
@@ -27,14 +32,19 @@ public class ProfileActivity extends AppCompatActivity {
     private TextView tvProMotherMobile;
     private TextView tvProBldGrp;
 
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private ProgressDialog dialog;
 
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private DocumentReference user = db.document("RBSMTC/MCA/MCA(DD)8/admin@admin.com");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        dialog = new ProgressDialog(ProfileActivity.this);
+        dialog.setMessage("Please Wait!!");
+        dialog.show();
 
         tvProName = (TextView) findViewById(R.id.tvProName);
         tvProClass = (TextView) findViewById(R.id.tvProClass);
@@ -82,6 +92,9 @@ public class ProfileActivity extends AppCompatActivity {
                             tvProFatherMobile.setText(FatherMobile);
                             tvProMotherMobile.setText(MotherMobile);
                             tvProBldGrp.setText(BldGrp);
+
+                            dialog.dismiss();
+
                         } else {
                             Toast.makeText(ProfileActivity.this, "Document does not exists!!", Toast.LENGTH_SHORT).show();
                         }
@@ -91,6 +104,7 @@ public class ProfileActivity extends AppCompatActivity {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Toast.makeText(ProfileActivity.this, "Error!!", Toast.LENGTH_SHORT).show();
+                        Log.d(TAG, e.toString());
                     }
                 });
 

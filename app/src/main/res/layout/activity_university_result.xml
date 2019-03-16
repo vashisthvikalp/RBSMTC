@@ -33,14 +33,13 @@
 
     </RelativeLayout>
 
-    <TextView
+    <WebView
+        android:id="@+id/webView"
         android:layout_below="@id/header"
         android:layout_above="@id/relBottom"
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="64dp"
-        android:text="Hello this is University Result activity"/>
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
 
     <!--Bottom bar-->
     <LinearLayout

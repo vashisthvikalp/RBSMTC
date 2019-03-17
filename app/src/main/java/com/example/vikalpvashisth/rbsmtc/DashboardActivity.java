@@ -59,7 +59,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         ctSchedule = (CardView) findViewById(R.id.cardViewCTSchedule);
         faculty = (CardView) findViewById(R.id.cardViewFaculty);
         feeSummary = (CardView) findViewById(R.id.cardViewFeeSummary);
-        library = (CardView) findViewById(R.id.cardViewLibrary);
+        library = (CardView) findViewById(R.id.cardViewSyllabus);
         newsEvents = (CardView) findViewById(R.id.cardViewNewsEvents);
         noticeBoard = (CardView) findViewById(R.id.cardViewNoticeBoard);
         profile = (CardView) findViewById(R.id.cardViewProfile);
@@ -128,9 +128,9 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
                 startActivity(new Intent(this,Fee.class));
                 break;
 
-            case R.id.cardViewLibrary:
-                Toast.makeText(getApplicationContext(), "Library Clicked", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(this,Library.class));
+            case R.id.cardViewSyllabus:
+                Toast.makeText(getApplicationContext(), "Syllabus Clicked", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, Syllabus.class));
                 break;
 
             case R.id.cardViewNewsEvents:

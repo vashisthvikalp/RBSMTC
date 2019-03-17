@@ -9,4 +9,8 @@
     <color name="gradStart">#7F8C8D</color>
     <color name="gradStop">#000000</color>
 
+    <color name="tabTextColor">#fff</color>
+    <color name="tabIndicatorColor">#2d2d2d</color>
+
+
 </resources>

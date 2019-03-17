@@ -3,11 +3,11 @@ package com.example.vikalpvashisth.rbsmtc;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Library extends AppCompatActivity {
+public class Syllabus extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_library);
+        setContentView(R.layout.activity_syllabus);
     }
 }

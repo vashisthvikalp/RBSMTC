@@ -25,8 +25,7 @@ public class ContactUs extends AppCompatActivity {
         phnNumber.setIntent(i);
 
 
-
-        String desc = "Raja Balwant Singh College, Agra (formerly Balwant Rajput College, Agra), was established way back in 1885 by Raja Balwant Singh Ji of Awagarh state.The college is having a number of faculties including Arts, Science, Education, Library Science and Agriculture and teaching at postgraduate level is done in as many as 31 subjects.In the year 2017, the college has added one more feather to its cap by getting accredited as A+ by NAAC. \n Faculty of Management & Computer Application ( FMCA ) was established in 1999 as one of the faculties of Raja Balwant Singh College, Agra under the aegis of Balwant Educational Society for imparting quality professional education to all the sections of the society. In 2012, FMCA got upgraded as \"Raja Balwant Singh Management Technacal Campus, Agra\" (RBSMTC, Agra).";
+        String desc = "Raja Balwant Singh College, Agra (formerly Balwant Rajput College, Agra), was established way back in 1885 by Raja Balwant Singh Ji of Awagarh state.The college is having a number of faculties including Arts, Science, Education, Syllabus Science and Agriculture and teaching at postgraduate level is done in as many as 31 subjects.In the year 2017, the college has added one more feather to its cap by getting accredited as A+ by NAAC. \n Faculty of Management & Computer Application ( FMCA ) was established in 1999 as one of the faculties of Raja Balwant Singh College, Agra under the aegis of Balwant Educational Society for imparting quality professional education to all the sections of the society. In 2012, FMCA got upgraded as \"Raja Balwant Singh Management Technical Campus, Agra\" (RBSMTC, Agra).";
 
         View aboutPage = new AboutPage(this)
                 .isRTL(false)

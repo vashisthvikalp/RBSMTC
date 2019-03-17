@@ -13,20 +13,48 @@
         android:roundIcon="@drawable/ballu"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProfileActivity"></activity>
-        <activity android:name=".UniversityResult" />
-        <activity android:name=".Notice" />
-        <activity android:name=".NewsEvents" />
-        <activity android:name=".Library" />
-        <activity android:name=".Fee" />
-        <activity android:name=".Faculty" />
-        <activity android:name=".CTSchedule" />
-        <activity android:name=".CTMarks" />
-        <activity android:name=".ContactUs" />
-        <activity android:name=".Attendance" />
-        <activity android:name=".Assignment" />
-        <activity android:name=".DashboardActivity" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UniversityResult"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Notice"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NewsEvents"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Syllabus"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fee"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Faculty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CTSchedule"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CTMarks"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ContactUs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Attendance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Assignment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DashboardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

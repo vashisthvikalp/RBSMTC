@@ -11,7 +11,7 @@ RBSMTC Student App is an Android application that provides the student with the 
 
 ## Dashboard 
 
-<img src="https://github.com/vashisthvikalp/RBSMTC/blob/master/Images/Page-3-Image-3.jpg" alt="Dashboard" width="229" height="495">
+<img src="https://github.com/vashisthvikalp/RBSMTC/blob/master/Images/Page-4-Image-4.jpg" alt="Dashboard" width="229" height="495">
 
 ## About 
 
